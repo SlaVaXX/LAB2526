@@ -1,0 +1,15 @@
+D:\Stud\LAB2526\LAB2526\bin\Debug\net7.0\LAB2526.exe
+D:\Stud\LAB2526\LAB2526\bin\Debug\net7.0\LAB2526.deps.json
+D:\Stud\LAB2526\LAB2526\bin\Debug\net7.0\LAB2526.runtimeconfig.json
+D:\Stud\LAB2526\LAB2526\bin\Debug\net7.0\LAB2526.dll
+D:\Stud\LAB2526\LAB2526\bin\Debug\net7.0\LAB2526.pdb
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.csproj.AssemblyReference.cache
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.GeneratedMSBuildEditorConfig.editorconfig
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.AssemblyInfoInputs.cache
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.AssemblyInfo.cs
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.csproj.CoreCompileInputs.cache
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.dll
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\refint\LAB2526.dll
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.pdb
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\LAB2526.genruntimeconfig.cache
+D:\Stud\LAB2526\LAB2526\obj\Debug\net7.0\ref\LAB2526.dll
