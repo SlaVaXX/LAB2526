@@ -17,7 +17,7 @@ namespace LAB2526
                 Console.WriteLine("\nВведіть доступну команду:\n(new - створити новий прямокутник)\n(end - завершити виконання програми)");
                 if (i > 0)
                 {
-                    Console.WriteLine("length - довжина прямокутника)\n(coordinates - координати точок прямокутника)\n(area - площа прямокутника)\n(perimeter - периметр прямокутника)");
+                    Console.WriteLine("length - довжина сторін прямокутника)\n(coordinates - координати точок прямокутника)\n(area - площа прямокутника)\n(perimeter - периметр прямокутника)");
                 }
                 Temp = Console.ReadLine();
                 if (Temp == "new")
