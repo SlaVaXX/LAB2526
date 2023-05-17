@@ -14,6 +14,7 @@ namespace LAB2526
         private T CoordinateY;
         public T GetCoordinateX => CoordinateX;
         public T GetCoordinateY => CoordinateY;
+
         public Point(T coordinateX, T coordinateY)
         {
             string coordinateXType = coordinateX.GetType().ToString();
@@ -21,17 +22,15 @@ namespace LAB2526
             if (!(coordinateXType == "System.Single" || coordinateXType == "System.Double" || coordinateXType == "System.Decimal")
                 && (!(coordinateYType == "System.Single" || coordinateYType == "System.Double" || coordinateYType == "System.Decimal")))
             {
-                throw new Exception("Not a floating point number");
+                throw new ArgumentException("\nNot a floating point number");
             }
-            else
-            {
-                CoordinateX = coordinateX;
-                CoordinateY = coordinateY;
-            }
+
+            CoordinateX = coordinateX;
+            CoordinateY = coordinateY;
         }
+
         public Point()
         {
-
         }
     }
 }

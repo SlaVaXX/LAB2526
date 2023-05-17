@@ -29,7 +29,7 @@ namespace LAB2526
             string CurrentType = TopLeftX.GetType().ToString();
             if (!(CurrentType == "System.Single" || CurrentType == "System.Double" || CurrentType == "System.Decimal"))
             {
-                throw new Exception("Not a floating point type!");
+                throw new Exception("\nNot a floating point type!");
             }
             Vector2 TopLeft = new Vector2(Convert.ToSingle(TopLeftX), Convert.ToSingle(TopLeftY));
             Vector2 BottomLeft = new Vector2(Convert.ToSingle(BottomLeftX), Convert.ToSingle(BottomLeftY));
@@ -56,7 +56,7 @@ namespace LAB2526
                 || (Side1HypotenuseAngle + Side2HypotenuseAngle) != 90
                 )
             {
-                throw new Exception("Not a right triangle!");
+                throw new ArgumentException("\nNot a right triangle!");
             }
 
             this.TopLeft = new Point<T>(TopLeftX, TopLeftY);
@@ -68,7 +68,6 @@ namespace LAB2526
             RightSideLength = LeftSideLength;
             BottomSideLength = new Vector2(Convert.ToSingle(BottomRightX), Convert.ToSingle(BottomRightY)).Length();
             TopSideLength = BottomSideLength;
-
         }
         public Rectangle()
         {
@@ -93,10 +92,10 @@ namespace LAB2526
         }
         public void PrintCoordinates()
         {
-            Console.WriteLine($"\nКоординати лівої вершньої вершини = <{TopLeft.GetCoordinateX}|{TopLeft.GetCoordinateY}>");
-            Console.WriteLine($"\nКоординати лівої нижньої вершини = <{BottomLeft.GetCoordinateX}|{BottomLeft.GetCoordinateY}>");
-            Console.WriteLine($"\nКоординати правої вершньої вершини = <{TopRight.GetCoordinateX}|{TopRight.GetCoordinateY}>");
-            Console.WriteLine($"\nКоординати правої нижньої вершини = <{BottomRight.GetCoordinateX}|{BottomRight.GetCoordinateY}>");
+            Console.WriteLine($"\nКоординати лівої вершньої вершини = {new Vector2((float)Math.Round(Convert.ToSingle(TopLeft.GetCoordinateX),1), (float)Math.Round(Convert.ToSingle(TopLeft.GetCoordinateY)))}");
+            Console.WriteLine($"\nКоординати лівої нижньої вершини = {new Vector2((float)Math.Round(Convert.ToSingle(BottomLeft.GetCoordinateX),1), (float)Math.Round(Convert.ToSingle(BottomLeft.GetCoordinateY)))}");
+            Console.WriteLine($"\nКоординати правої вершньої вершини = {new Vector2((float)Math.Round(Convert.ToSingle(TopRight.GetCoordinateX),1), (float)Math.Round(Convert.ToSingle(TopRight.GetCoordinateY)))}");
+            Console.WriteLine($"\nКоординати правої нижньої вершини = {new Vector2((float)Math.Round(Convert.ToSingle(BottomRight.GetCoordinateX),1), (float)Math.Round(Convert.ToSingle(BottomRight.GetCoordinateY)))}");
         }
     }
 }

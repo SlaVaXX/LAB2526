@@ -11,7 +11,7 @@ namespace LAB2526
             Rectangle<double> DoubleRec = new Rectangle<double>();
             Rectangle<decimal> DecimalRec = new Rectangle<decimal>();
             string CurrentRec = "";
-            for (int i = 0; ;)
+            for (int i = 0;;)
             {
                 string Temp = "";
                 Console.WriteLine("\nВведіть доступну команду:\n(new - створити новий прямокутник)\n(end - завершити виконання програми)");
@@ -19,6 +19,7 @@ namespace LAB2526
                 {
                     Console.WriteLine("length - довжина сторін прямокутника)\n(coordinates - координати точок прямокутника)\n(area - площа прямокутника)\n(perimeter - периметр прямокутника)");
                 }
+
                 Temp = Console.ReadLine();
                 if (Temp == "new")
                 {
@@ -68,24 +69,24 @@ namespace LAB2526
                 {
                     if (CurrentRec == "float")
                     {
-                        Console.WriteLine($"\nДовжина лівої сторони = {FloatRec.GetLeftSideLength}");
-                        Console.WriteLine($"\nДовжина верхньої сторони = {FloatRec.GetTopSideLength}");
-                        Console.WriteLine($"\nДовжина правої сторони = {FloatRec.GetRightSideLength}");
-                        Console.WriteLine($"\nДовжина нижньої сторони = {FloatRec.GetBottomSideLength}");
+                        Console.WriteLine($"\nДовжина лівої сторони = {Math.Round(FloatRec.GetLeftSideLength,1)}");
+                        Console.WriteLine($"\nДовжина верхньої сторони = {Math.Round(FloatRec.GetTopSideLength,1)}");
+                        Console.WriteLine($"\nДовжина правої сторони = {Math.Round(FloatRec.GetRightSideLength,1)}");
+                        Console.WriteLine($"\nДовжина нижньої сторони = {Math.Round(FloatRec.GetBottomSideLength,1)}");
                     }
                     else if (CurrentRec == "double")
                     {
-                        Console.WriteLine($"\nДовжина лівої сторони = {DoubleRec.GetLeftSideLength}");
-                        Console.WriteLine($"\nДовжина верхньої сторони = {DoubleRec.GetTopSideLength}");
-                        Console.WriteLine($"\nДовжина правої сторони = {DoubleRec.GetRightSideLength}");
-                        Console.WriteLine($"\nДовжина нижньої сторони = {DoubleRec.GetBottomSideLength}");
+                        Console.WriteLine($"\nДовжина лівої сторони = {Math.Round(DoubleRec.GetLeftSideLength,1)}");
+                        Console.WriteLine($"\nДовжина верхньої сторони = {Math.Round(DoubleRec.GetTopSideLength,1)}");
+                        Console.WriteLine($"\nДовжина правої сторони = {Math.Round(DoubleRec.GetRightSideLength,1)}");
+                        Console.WriteLine($"\nДовжина нижньої сторони = {Math.Round(DoubleRec.GetBottomSideLength,1)}");
                     }
                     else if (CurrentRec == "decimal")
                     {
-                        Console.WriteLine($"\nДовжина лівої сторони = {DecimalRec.GetLeftSideLength}");
-                        Console.WriteLine($"\nДовжина верхньої сторони = {DecimalRec.GetTopSideLength}");
-                        Console.WriteLine($"\nДовжина правої сторони = {DecimalRec.GetRightSideLength}");
-                        Console.WriteLine($"\nДовжина нижньої сторони = {DecimalRec.GetBottomSideLength}");
+                        Console.WriteLine($"\nДовжина лівої сторони = {Math.Round(DecimalRec.GetLeftSideLength,1)}");
+                        Console.WriteLine($"\nДовжина верхньої сторони = {Math.Round(DecimalRec.GetTopSideLength,1)}");
+                        Console.WriteLine($"\nДовжина правої сторони = {Math.Round(DecimalRec.GetRightSideLength,1)}");
+                        Console.WriteLine($"\nДовжина нижньої сторони = {Math.Round(DecimalRec.GetBottomSideLength,1)}");
                     }
                 }
                 else if (Temp == "coordinates" && i > 0)
@@ -165,11 +166,17 @@ namespace LAB2526
                 BottomRightY = float.Parse(Console.ReadLine());
                 FloatRec = Rectangle<float>.NewRectangle(TopLeftX, TopLeftY, BottomLeftX, BottomLeftY, BottomRightX, BottomRightY);
             }
+            catch (ArgumentException)
+            {
+                throw;
+            }
             catch (Exception)
             {
                 throw new Exception("Некоректні дані!");
+                // 
             }
         }
+
         private static void InitDoubleRec(ref Rectangle<double> DoubleRec)
         {
             double TopLeftX = 0, TopLeftY = 0, BottomLeftX = 0, BottomLeftY = 0, BottomRightX = 0, BottomRightY = 0;
@@ -191,11 +198,16 @@ namespace LAB2526
                 BottomRightY = double.Parse(Console.ReadLine());
                 DoubleRec = Rectangle<double>.NewRectangle(TopLeftX, TopLeftY, BottomLeftX, BottomLeftY, BottomRightX, BottomRightY);
             }
+            catch (ArgumentException)
+            {
+                throw;
+            }
             catch (Exception)
             {
                 throw new Exception("Некоректні дані!");
             }
         }
+
         private static void InitDecimalRec(ref Rectangle<decimal> FloatRec)
         {
             decimal TopLeftX = 0, TopLeftY = 0, BottomLeftX = 0, BottomLeftY = 0, BottomRightX = 0, BottomRightY = 0;
@@ -216,6 +228,10 @@ namespace LAB2526
                 Console.Write("\nВведіть координату Y для правої нижньої координати: ");
                 BottomRightY = decimal.Parse(Console.ReadLine());
                 FloatRec = Rectangle<decimal>.NewRectangle(TopLeftX, TopLeftY, BottomLeftX, BottomLeftY, BottomRightX, BottomRightY);
+            }
+            catch (ArgumentException)
+            {
+                throw;
             }
             catch (Exception)
             {
