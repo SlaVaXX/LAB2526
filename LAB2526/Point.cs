@@ -22,7 +22,7 @@ namespace LAB2526
             if (!(coordinateXType == "System.Single" || coordinateXType == "System.Double" || coordinateXType == "System.Decimal")
                 && (!(coordinateYType == "System.Single" || coordinateYType == "System.Double" || coordinateYType == "System.Decimal")))
             {
-                throw new ArgumentException("\nNot a floating point number");
+                throw new ArgumentException("\nNot a floating point type!");
             }
 
             CoordinateX = coordinateX;
